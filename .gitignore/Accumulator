@@ -1,0 +1,13 @@
+#lang racket
+
+(define lst'(1 2 3 4 5))
+
+
+(define (resulting op initial item)
+   (op item initial))
+
+(define (accumulator op initial list)
+  (if (empty? list) initial
+     (op (car list)(accumulator op initial (cdr list)))
+    )
+  )
