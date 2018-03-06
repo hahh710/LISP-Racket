@@ -1,0 +1,9 @@
+#lang racket
+
+(define (filtering-odds list)
+  ()
+  )
+
+(define (odd? item)
+  (= 0 (% item 2))
+  )
