@@ -1,0 +1,9 @@
+#lang racket
+
+
+(define (absolute x)
+  (if (or (= x 0) (> x 0)
+      x
+     (-x)) 
+))
+  

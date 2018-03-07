@@ -1,0 +1,12 @@
+#lang racket
+;; in the formal parameter, you can put procedure, in forms of name.
+
+(define (map proc lst)
+  (if(empty? lst)
+     empty
+     (cons (proc (car lst)) (map proc (cdr lst)))
+))
+
+(define (square x)
+  (* x x))
+

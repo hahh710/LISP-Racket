@@ -1,0 +1,35 @@
+#lang racket
+(define lst '(1 2 3 4))
+(define lst2 '(9 8 7 6 5 4 3 2 1 0))
+
+(define (reverse lst)
+  (reverse-iter lst (-(length lst)1) ))
+
+(define (reverse-iter list length)
+  (if (< length 0)
+      empty
+      ;;(get list 0)
+      (cons (get list length) (reverse-iter list (- length 1)))
+))
+
+
+(define (length list)
+  (length-iter list 0)
+  )
+(define (length-iter list count)
+  (if (empty? list)
+      count
+      (length-iter (cdr list) (+ count 1))
+      )
+  )
+
+(define (get lst index)
+  (get-iter lst 0 index)
+  )
+
+(define (get-iter lst count index)
+  (if (= index count)
+      (car lst)
+      (get-iter (cdr lst) (+ count 1) index)
+      )
+  )

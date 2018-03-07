@@ -1,0 +1,5 @@
+#lang racket
+
+
+(define (sqaure x)(* x x))
+
