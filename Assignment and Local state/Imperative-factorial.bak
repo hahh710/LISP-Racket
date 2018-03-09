@@ -1,0 +1,11 @@
+#lang racket
+
+
+(define (factorial n)
+  (define (iter product counter)
+    (if (= n counter)
+        1
+        ((iter (* n counter product) (+ counter 1) ))
+        )
+    )(iter 0 0)
+  )
